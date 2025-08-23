@@ -20,29 +20,14 @@ public class PlayerJump2D : MonoBehaviour
         {
             Jump();
         }
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            Slide();
-        }
-        else
-        {
-            Idle();   
-        }
     }
-    void Idle()
-    {
-        rb.gravityScale = 1;
-    }
+
     void Jump()
     {
         // 속도를 바로 설정 (중첩 점프 시 쭉 올라가는 문제 해결)
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
 
         jumpCount++;
-    }
-    void Slide()
-    {
-        rb.gravityScale = 3;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
