@@ -27,7 +27,7 @@ public class BackgroundLoad : MonoBehaviour {
     private void Reposition() {
         Vector2 offset = new Vector2(width * 2f, 0);
         transform.position = (Vector2) transform.position + offset;
-        if (loopNumder % 6 == 0)
+        if (loopNumder % 15 == 0)
         {
             _spriteRenderer.sprite = backGroundImag[1];
             // platform Manager에서 나오는 몬스터 다르게 추가

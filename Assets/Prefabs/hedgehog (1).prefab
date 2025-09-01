@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1351264757645948393}
   - component: {fileID: 266044684264960756}
   - component: {fileID: 353604142839889553}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hedgehog (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5258952762246845558}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.186, y: 1.5999998, z: 0}
-  m_LocalScale: {x: 0.5, y: 9, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.23094688, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,7 +115,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &353604142839889553
 BoxCollider2D:
   m_ObjectHideFlags: 0
