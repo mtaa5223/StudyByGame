@@ -1,3 +1,3 @@
 repository "2DPlay/2DPlay@14569117648238@cloud"
   path "/"
-    smartbranch "/main/Dev_kang_PlayerData"
+    smartbranch "/main/Dev_Kang_test1"
