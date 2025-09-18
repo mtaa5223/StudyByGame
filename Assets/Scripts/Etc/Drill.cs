@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Drill : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("enemy"))
+        if (other.CompareTag("Enemy"))
         {
             Destroy(gameObject);
             Destroy(other.gameObject);

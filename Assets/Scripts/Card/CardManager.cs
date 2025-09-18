@@ -47,9 +47,7 @@ public class CardManager : MonoBehaviour
         }
         if (BulletActive)
         {
-            GameObject bullet = Instantiate(bulletPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.linearVelocity = Vector2.right * 10f; // 오른쪽(x+)으로 속도 10
+            StartCoroutine(BulletShot());
         }
         if (GoggleActive)
         {
@@ -72,7 +70,16 @@ public class CardManager : MonoBehaviour
             Debug.Log($"최대 체력 보너스: {MaxHealthBonus}");
         }
     }
-
+    IEnumerator BulletShot()
+    {
+        while (BulletActive)
+        {
+            // 총알 생성
+            Instantiate(bulletPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+            // 1초 대기
+            yield return new WaitForSeconds(1f);
+        }
+    }
   IEnumerator DrillRoutine()
     {
         while (DrillActive)
