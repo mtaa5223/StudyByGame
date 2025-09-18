@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using System.Collections;
 
 public class CardManager : MonoBehaviour
 {
@@ -32,7 +33,6 @@ public class CardManager : MonoBehaviour
     public GameObject shieldObject;
     public GameObject drillObject;
     public GameObject bulletPrefab;
-    public GameObject coinGet;
     void Update()
     {
         // Shield 예시
@@ -57,7 +57,7 @@ public class CardManager : MonoBehaviour
         }
         if (DrillActive)
         {
-            drillObject.SetActive(true);
+        StartCoroutine(DrillRoutine());
         }
         if (ShoesActive)
         {
@@ -70,6 +70,17 @@ public class CardManager : MonoBehaviour
         if (MaxHealthBonus > 0)
         {
             Debug.Log($"최대 체력 보너스: {MaxHealthBonus}");
+        }
+    }
+
+  IEnumerator DrillRoutine()
+    {
+        while (DrillActive)
+        {
+            // 드릴 생성
+            drillObject.SetActive(true);
+            // 10초 대기
+            yield return new WaitForSeconds(10f);
         }
     }
 }
